@@ -17,6 +17,7 @@ public class PlayPanel extends JPanel {
     private int numberOfPlayer;
     private static LinkedList<Token> tokenLinkedList = new LinkedList<>();
     private OxygenPanel op;
+    private DicePanel dp;
 
     public PlayPanel(Game game, int numberOfPlayer) {
         this.game = game;
@@ -37,7 +38,7 @@ public class PlayPanel extends JPanel {
 //op.decreaseOxygen(5);
 
         //EAST
-        DicePanel dp = new DicePanel(game.getPlayerList().get(turn % numberOfPlayer));
+         dp = new DicePanel(game.getPlayerList().get(turn % numberOfPlayer));
 
         add(dp, BorderLayout.EAST);
 
@@ -74,12 +75,14 @@ public class PlayPanel extends JPanel {
         }
     }
 
-    private void nextTurn() {
+    public void nextTurn() {
 //current player 찾는 공식임 ㅇㅇ
         game.getPlayerList().get(turn % numberOfPlayer).changeColor(Color.GRAY);
 
         turn++;
         game.getPlayerList().get(turn % numberOfPlayer).changeColor(Color.CYAN);
+        dp.setPlayer(game.getPlayerList().get(turn % numberOfPlayer));
+
     }
 
     public static LinkedList<Token> getTokenLinkedList() {

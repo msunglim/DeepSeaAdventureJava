@@ -21,7 +21,7 @@ public class Treasure2 extends Token {
 
                 Shape rect = new Rectangle2D.Double(0,0,50,50);
 
-                g2.setColor(Color.orange);
+                g2.setColor(Color.LIGHT_GRAY);
                 g2.fill(rect);
 
 
@@ -41,7 +41,7 @@ public class Treasure2 extends Token {
 
                 Shape rect = new Rectangle2D.Double(0,0,50,50);
 
-                g2.setColor(Color.orange);
+                g2.setColor(Color.LIGHT_GRAY);
                 g2.fill(rect);
 
 

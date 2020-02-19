@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="654e3118-f0f4-49af-bfc3-cf1e636ef3e7" name="Default Changelist" comment="" />
+    <list default="true" id="654e3118-f0f4-49af-bfc3-cf1e636ef3e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/META-INF/DeepSeaAdventure.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Token$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Token$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/PlayPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/PlayPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Map/Treasure2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/Treasure2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/DicePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/DicePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/PlayPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/PlayPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +37,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XrMBOLlPZQG7CiznweXBOUiRKA" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
@@ -75,10 +99,27 @@
       <updated>1581799623073</updated>
       <workItem from="1581799625386" duration="30621000" />
       <workItem from="1581836085176" duration="21008000" />
+      <workItem from="1581916053365" duration="113000" />
+      <workItem from="1581952862512" duration="7767000" />
+      <workItem from="1581970240416" duration="1852000" />
+      <workItem from="1581982664612" duration="2082000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

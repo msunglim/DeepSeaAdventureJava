@@ -9,14 +9,28 @@ import java.awt.event.ActionListener;
 
 public class DicePanel extends JPanel {
 
-    int d1;
-    int d2;
-    DicePanel thisthis;
-    JLabel jl;
+    private int d1;
+    private int d2;
+    private DicePanel thisthis;
+    private JLabel jl;
 
-    public DicePanel(Player player) {
+    private Player player;
+    public DicePanel(Player p) {
         thisthis = this;
+        player = p;
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
+
+        JButton declareReturn = new JButton("Return!");
+        declareReturn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+             //   declareReturn.removeActionListener(declareReturn.getActionListeners()[0]);
+                player.setReturning(true);
+                player.setLocation(player.getLocation() -1); //리턴시 로케이션이 그전에 +1이기떄문에 1단계낮춰준다.
+         //       System.out.println("리턴명령하달");
+            }
+        });
 
         JButton roll = new JButton("Roll Dice");
 
@@ -47,6 +61,7 @@ public class DicePanel extends JPanel {
             }
         });
 
+        add(declareReturn);
         add(roll);
         add(jl);
     }
@@ -54,6 +69,10 @@ public class DicePanel extends JPanel {
     public void updateText() {
         jl.setText("Dice1:" + d1 + " Dice2:" + d2);
         this.validate();
+    }
+    public void setPlayer(Player player){
+        this.player = player;
+
     }
 
 }

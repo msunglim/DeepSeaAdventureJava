@@ -16,8 +16,10 @@ public abstract class Token {
     protected JPanel shape;
     private Token previous;
     private Token next;
-    private boolean hasPlayer;
+    private boolean hasPlayer; //플레이어 누군가가 이위에 서있다.
     private Player player;
+    private boolean purchased;//먹혔다.
+
 
     public static Token getToken(int i) {
 
@@ -47,6 +49,8 @@ public abstract class Token {
 
     //구매되었을때 시꺼멓게
     public void purchased() {
+        purchased = true;
+
         p.removeAll();
         p.removeAll();
         p.setPreferredSize(new Dimension(52, 52));
@@ -79,6 +83,7 @@ public abstract class Token {
 
         player.getPlayerAvartar().setBounds(-12, 10, 50, 50);
         p.add(player.getPlayerAvartar(), JLayeredPane.POPUP_LAYER);
+        p.getParent().getParent().getParent().repaint();//하도안되서 치트키썻다 ㅋㅋ
 
         hasPlayer = true;
         this.player = player;
@@ -89,11 +94,11 @@ public abstract class Token {
 
     public void removePlayer(Player player) {
 
-        p.getParent().getParent().getParent().repaint();//하도안되서 치트키썻다 ㅋㅋ
+    //    p.getParent().getParent().getParent().repaint();//하도안되서 치트키썻다 ㅋㅋ
 
         hasPlayer = false;
         this.player = null;
-        p.repaint();
+     //   p.repaint();
 
     }
 
@@ -120,5 +125,9 @@ public abstract class Token {
 
     public JPanel getShape() {
         return shape;
+    }
+
+    public boolean isPurchased(){
+        return purchased;
     }
 }

@@ -116,11 +116,11 @@ public class Player {
 
 
     public void move(int sum) {
-        // sum -= tokenList.size();
+        sum -= tokenList.size();
 
-        int jump = 0;
+
         for (int i = 0; i < sum; i++) {
-
+            int jump = 0;
 
             //누군가를 스킵했다면 점프하니까 그 점프하기전의 이미지를 지울려면 저렇게해야하고
             // System.out.println(location);
@@ -134,32 +134,43 @@ public class Player {
             }
 
             if (!returning && location < 32) {
+                //        System.out.println("전진뿐");
                 if (location != 0) {
-
+                    //남겨진 그림자 제거
                     (Game.getPlayPanel().getTokenLinkedList().get(location - 1)).removePlayer(this);
                 }
+                //전진전진
 
-                (Game.getPlayPanel().getTokenLinkedList().get(location)).addPlayer(this);
 
-                location++;//이친구도 나중에 점프한만큼 올라가게해야지. 그러게위해선 token 이 hasPlyaer같은ㄱ ㅔ있어야해.
+                //미숙한부분이있다.
+                while(Game.getPlayPanel().getTokenLinkedList().get(location+jump).isHasPlayer()){
+                    jump++;
+                }
+
+
+                (Game.getPlayPanel().getTokenLinkedList().get(location+jump)).addPlayer(this);
+
+                location= location+jump+1;//이친구도 나중에 점프한만큼 올라가게해야지. 그러게위해선 token 이 hasPlyaer같은ㄱ ㅔ있어야해.
                 if (location == 32) {
                     returning = true;
                     location = 31;
 
                 }
             } //종착역찍었거나 리턴선언뒤
-            else if (location >= 0) {
-
+            else if (returning && location >= 0) {
+                //    System.out.println("뺄떈빼야지");
 
                 (Game.getPlayPanel().getTokenLinkedList().get(location)).removePlayer(this);
+                //   System.out.println("나ㄴㅏ가요" + location);
 
                 if (location != 0) {
                     (Game.getPlayPanel().getTokenLinkedList().get(location - 1)).addPlayer(this);
-
+                    //       System.out.println("여따가넣었소" + (location));
                 }
                 location--;
 
             }
+            //       System.out.println("---");
             if (location < 0) {
 
                 (Game.getPlayPanel().getTokenLinkedList().get(location + 1)).getTokenPanel().remove(0);
@@ -168,65 +179,79 @@ public class Player {
 
                 break;
             }
+
         }
-        //구매여부물어봄
-        if (!gotIn) {
-            Game.getPlayPanel().getOxygenPanel().decreaseOxygen(tokenList.size());
-
-            JFrame purchaseFrame = new JFrame();
-            purchaseFrame.setPreferredSize(new Dimension(700, 400));
-            JPanel purchasePanel = new JPanel();
-
-            purchasePanel.setLayout(new BoxLayout(purchasePanel, BoxLayout.Y_AXIS));
-            JLabel ask = new JLabel("Would you purchase the token?", SwingConstants.CENTER);
+        Game.getPlayPanel().getOxygenPanel().decreaseOxygen(tokenList.size());
+        if (sum > 0) {
+            //구매여부물어봄
+            if (!gotIn) {
 
 
-            JButton yes = new JButton("YES");
-            JButton no = new JButton("NO");
+                JFrame purchaseFrame = new JFrame();
+                purchaseFrame.setPreferredSize(new Dimension(700, 400));
+                JPanel purchasePanel = new JPanel();
+
+                purchasePanel.setLayout(new BoxLayout(purchasePanel, BoxLayout.Y_AXIS));
+                JLabel ask = new JLabel("Would you purchase the token?", SwingConstants.CENTER);
 
 
-            Token curr;
-
-            if (returning) {
-                curr = Game.getPlayPanel().getTokenLinkedList().get(location);
-                JPanel tokenImage = Game.getPlayPanel().getTokenLinkedList().get(location).getShape();
-                tokenImage.setAlignmentX(Component.CENTER_ALIGNMENT);
-                purchasePanel.add(tokenImage);
+                JButton yes = new JButton("YES");
+                JButton no = new JButton("NO");
 
 
-            } else {
-                curr = Game.getPlayPanel().getTokenLinkedList().get(location - 1);
-                JPanel tokenImage = Game.getPlayPanel().getTokenLinkedList().get(location - 1).getShape();
-                tokenImage.setAlignmentX(Component.CENTER_ALIGNMENT);
-                purchasePanel.add(tokenImage);
+                Token curr;
+
+                if (returning) {
+                    curr = Game.getPlayPanel().getTokenLinkedList().get(location);
+                    //    System.out.println("현재는 " + location);
+                    JPanel tokenImage = Game.getPlayPanel().getTokenLinkedList().get(location).getShape();
+                    tokenImage.setAlignmentX(Component.CENTER_ALIGNMENT);
+                    purchasePanel.add(tokenImage);
+
+
+                } else {
+                    curr = Game.getPlayPanel().getTokenLinkedList().get(location - 1);
+                    //         System.out.println("현재는 w전진" + (location - 1));
+                    JPanel tokenImage = Game.getPlayPanel().getTokenLinkedList().get(location - 1).getShape();
+                    tokenImage.setAlignmentX(Component.CENTER_ALIGNMENT);
+                    purchasePanel.add(tokenImage);
+                }
+
+                yes.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        tokenList.add(curr.getHiddenValue());
+                        curr.purchased();
+                        //          System.out.println("지점 " + Game.getPlayPanel().getTokenLinkedList().indexOf(curr) + "은 먹혔다");
+
+                        updateNumberOfToken();
+                        purchaseFrame.dispose();
+
+                    }
+                });
+                no.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        purchaseFrame.dispose();
+                    }
+                });
+
+                if (!curr.isPurchased()) {
+                    //    System.out.println("먹히지않았소");
+                    purchasePanel.add(ask);
+                    purchasePanel.add(yes);
+                    purchasePanel.add(no);
+
+                    purchaseFrame.add(purchasePanel);
+                    purchaseFrame.pack();
+                    purchaseFrame.setVisible(true);
+                    purchaseFrame.setLocationRelativeTo(null);
+                }
             }
-
-            yes.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    tokenList.add(curr.getHiddenValue());
-                    curr.purchased();
-                    updateNumberOfToken();
-                    purchaseFrame.dispose();
-                }
-            });
-            no.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    purchaseFrame.dispose();
-                }
-            });
-
-            purchasePanel.add(ask);
-            purchasePanel.add(yes);
-            purchasePanel.add(no);
-
-            purchaseFrame.add(purchasePanel);
-            purchaseFrame.pack();
-            purchaseFrame.setVisible(true);
-            purchaseFrame.setLocationRelativeTo(null);
         }
 
+        //after move, next turn
+        Game.getPlayPanel().nextTurn();
     }
 
     private void updateNumberOfToken() {
@@ -234,5 +259,18 @@ public class Player {
         p.repaint();
     }
 
+    public void setReturning(boolean tf) {
+        if (returning) {
+            System.out.println("The player has already declared Returning");
+        }
+        returning = tf;
+    }
 
+    public void setLocation(int i) {
+        location = i;
+    }
+
+    public int getLocation() {
+        return location;
+    }
 }
