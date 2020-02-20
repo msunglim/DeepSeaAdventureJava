@@ -143,6 +143,7 @@ public class Player {
 
 
                 //미숙한부분이있다.
+                //location +jump가 32일시 returning 활성화하라.
                 while(Game.getPlayPanel().getTokenLinkedList().get(location+jump).isHasPlayer()){
                     jump++;
                 }
@@ -163,11 +164,16 @@ public class Player {
                 (Game.getPlayPanel().getTokenLinkedList().get(location)).removePlayer(this);
                 //   System.out.println("나ㄴㅏ가요" + location);
 
+
+                //location -1 -jump가 0 미만일시, 골인 으로 쳐박으라!
+                while(Game.getPlayPanel().getTokenLinkedList().get(location-1-jump).isHasPlayer()){
+                    jump++;
+                }
                 if (location != 0) {
-                    (Game.getPlayPanel().getTokenLinkedList().get(location - 1)).addPlayer(this);
+                    (Game.getPlayPanel().getTokenLinkedList().get(location - 1 -jump)).addPlayer(this);
                     //       System.out.println("여따가넣었소" + (location));
                 }
-                location--;
+                location= location- 1 -jump;
 
             }
             //       System.out.println("---");
