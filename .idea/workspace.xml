@@ -4,20 +4,37 @@
     <list default="true" id="654e3118-f0f4-49af-bfc3-cf1e636ef3e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/META-INF/DeepSeaAdventure.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Token$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Token$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure1$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure4$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure4$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure4$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Map/Treasure4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/DicePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/OxygenPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/OxygenPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/PlayPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/PlayPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/PlayerInformationPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/PlayerInformationPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/Panels/WelcomePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/main/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DeepSeaAdventure/player/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Map/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Map/Treasure2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Map/Treasure2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/DicePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/DicePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/PlayPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/PlayPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/player/Player.java" afterDir="false" />
     </list>
@@ -46,6 +63,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">

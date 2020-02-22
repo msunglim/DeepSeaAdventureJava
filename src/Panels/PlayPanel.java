@@ -80,9 +80,14 @@ public class PlayPanel extends JPanel {
         game.getPlayerList().get(turn % numberOfPlayer).changeColor(Color.GRAY);
 
         turn++;
-        game.getPlayerList().get(turn % numberOfPlayer).changeColor(Color.CYAN);
-        dp.setPlayer(game.getPlayerList().get(turn % numberOfPlayer));
+        int jump = 0;
+        while(jump < numberOfPlayer && game.getPlayerList().get((turn +jump)% numberOfPlayer).isGotIn()){
+            jump++;
+        }
+        game.getPlayerList().get((turn+jump) % numberOfPlayer).changeColor(Color.CYAN);
+        dp.setPlayer(game.getPlayerList().get((turn+jump) % numberOfPlayer));
 
+        turn+= jump;
     }
 
     public static LinkedList<Token> getTokenLinkedList() {

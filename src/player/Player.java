@@ -126,9 +126,9 @@ public class Player {
             // System.out.println(location);
             if (location < 0) {
 
-                (Game.getPlayPanel().getTokenLinkedList().get(location + 1)).getTokenPanel().remove(0);
+               // (Game.getPlayPanel().getTokenLinkedList().get(location + 1)).getTokenPanel().remove(0);
                 (Game.getPlayPanel().getTokenLinkedList().get(location + 1)).getTokenPanel().repaint();
-                gotIn = true;
+             //   gotIn = true;
 
                 break;
             }
@@ -144,41 +144,57 @@ public class Player {
 
                 //미숙한부분이있다.
                 //location +jump가 32일시 returning 활성화하라.
-                while(Game.getPlayPanel().getTokenLinkedList().get(location+jump).isHasPlayer()){
+                while (Game.getPlayPanel().getTokenLinkedList().get(location + jump).isHasPlayer()) {
                     jump++;
                 }
 
 
-                (Game.getPlayPanel().getTokenLinkedList().get(location+jump)).addPlayer(this);
+                (Game.getPlayPanel().getTokenLinkedList().get(location + jump)).addPlayer(this);
 
-                location= location+jump+1;//이친구도 나중에 점프한만큼 올라가게해야지. 그러게위해선 token 이 hasPlyaer같은ㄱ ㅔ있어야해.
+                location = location + jump + 1;//이친구도 나중에 점프한만큼 올라가게해야지. 그러게위해선 token 이 hasPlyaer같은ㄱ ㅔ있어야해.
                 if (location == 32) {
                     returning = true;
                     location = 31;
 
                 }
             } //종착역찍었거나 리턴선언뒤
-            else if (returning && location >= 0) {
+            else if (!gotIn && returning && location >= 0) {
                 //    System.out.println("뺄떈빼야지");
-
+                System.out.println("...");
                 (Game.getPlayPanel().getTokenLinkedList().get(location)).removePlayer(this);
                 //   System.out.println("나ㄴㅏ가요" + location);
 
 
                 //location -1 -jump가 0 미만일시, 골인 으로 쳐박으라!
-                while(Game.getPlayPanel().getTokenLinkedList().get(location-1-jump).isHasPlayer()){
+                while (!gotIn && location - 1 - jump >=0 && Game.getPlayPanel().getTokenLinkedList().get(location - 1 - jump).isHasPlayer()) {
+                    //왼쪽 종착역 찍었을때 그만 decrease
+
                     jump++;
+
+
                 }
-                if (location != 0) {
-                    (Game.getPlayPanel().getTokenLinkedList().get(location - 1 -jump)).addPlayer(this);
-                    //       System.out.println("여따가넣었소" + (location));
+
+                //점프는 해야하지만 그 위치가 필드밖일때, 점프전 위치에 있는 말을 제거하고 갓인투루
+                if ( jump > 0 &&location - 1 - jump < 0) {
+                    gotIn = true;
+                    (Game.getPlayPanel().getTokenLinkedList().get(location)).getTokenPanel().remove(0);
+                    System.out.println("로케이션"+ location);
+                    System.out.println("jump"+ jump);
+                    System.out.println("location -1 - jump"+ (location -1 -jump));
                 }
-                location= location- 1 -jump;
+
+                //들어갔다는 판정이없다면 에드
+                if (location != 0 && !gotIn) {
+                    (Game.getPlayPanel().getTokenLinkedList().get(location - 1 - jump)).addPlayer(this);
+
+                }
+                location = location - 1 - jump;
 
             }
             //       System.out.println("---");
-            if (location < 0) {
-
+            //갓인판정이안났는데, 로케이션이 뒤였다면 제거..
+            if (!gotIn && location < 0) {
+                System.out.println("할로쓰");
                 (Game.getPlayPanel().getTokenLinkedList().get(location + 1)).getTokenPanel().remove(0);
                 (Game.getPlayPanel().getTokenLinkedList().get(location + 1)).getTokenPanel().repaint();
                 gotIn = true;
@@ -187,6 +203,13 @@ public class Player {
             }
 
         }
+
+
+
+
+
+
+        //토큰구매여부
         Game.getPlayPanel().getOxygenPanel().decreaseOxygen(tokenList.size());
         if (sum > 0) {
             //구매여부물어봄
@@ -278,5 +301,9 @@ public class Player {
 
     public int getLocation() {
         return location;
+    }
+
+    public boolean isGotIn(){
+        return gotIn;
     }
 }
